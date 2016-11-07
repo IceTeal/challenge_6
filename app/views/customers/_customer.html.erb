@@ -1,11 +1,13 @@
-<div>
+<div class="customer">
 	<div class="actions">
-		<%= link_to 'Edit', edit_customer_path(customer) %>
-		<%= link_to 'X', customer, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<%= link_to 'edit', edit_customer_path(customer) %>
+		<%= link_to 'x', customer, method: :delete, data: { confirm: 'Are you sure?' } %>
 	</div>
 	<h2><%=customer.full_name%></h2>
-	<p><%= image_tag(customer.image) %></p>
-	<p><%=customer.phone_number%></p>
-	<p><%=customer.email%></p>
-	<p><%=customer.notes%></p>
+	<div>
+	<%=image_tag(customer.image) %>
+</div>
+	<p><strong>Phone:</strong><%=customer.phone_number%></p>
+	<p><strong>Email:</strong><%=customer.email%></p>
+	<p><strong>Notes:</strong><%=customer.notes%></p>
 </div>
